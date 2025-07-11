@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AI Classroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar (simplified for signup page) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <div class="nav-auth">
+                <a href="login.html" class="nav-link">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h1 class="auth-title">Join Us Today!</h1>
+                        <p class="auth-subtitle">Create your account and start your AI-powered learning journey</p>
+                    </div>
+
+                    <form class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name" class="form-label">First Name</label>
+                                <input type="text" id="first-name" class="form-input" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name" class="form-label">Last Name</label>
+                                <input type="text" id="last-name" class="form-input" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-input" placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-input" placeholder="Create a password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                <input type="password" id="confirm-password" class="form-input" placeholder="Confirm your password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="grade" class="form-label">Grade Level</label>
+                            <select id="grade" class="form-select" required>
+                                <option value="">Select your grade</option>
+                                <option value="6">6th Grade</option>
+                                <option value="7">7th Grade</option>
+                                <option value="8">8th Grade</option>
+                                <option value="9">9th Grade</option>
+                                <option value="10">10th Grade</option>
+                                <option value="11">11th Grade</option>
+                                <option value="12">12th Grade</option>
+                                <option value="college">College</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="school" class="form-label">School/Institution (Optional)</label>
+                            <input type="text" id="school" class="form-input" placeholder="Enter your school or institution name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subjects" class="form-label">Favorite Subjects</label>
+                            <div class="subjects-grid">
+                                <label class="subject-checkbox">
+                                    <input type="checkbox" value="mathematics">
+                                    <span class="checkbox-custom"></span>
+                                    Mathematics
+                                </label>
+                                <label class="subject-checkbox">
+                                    <input type="checkbox" value="science">
+                                    <span class="checkbox-custom"></span>
+                                    Science
+                                </label>
+                                <label class="subject-checkbox">
+                                    <input type="checkbox" value="english">
+                                    <span class="checkbox-custom"></span>
+                                    English
+                                </label>
+                                <label class="subject-checkbox">
+                                    <input type="checkbox" value="history">
+                                    <span class="checkbox-custom"></span>
+                                    History
+                                </label>
+                                <label class="subject-checkbox">
+                                    <input type="checkbox" value="geography">
+                                    <span class="checkbox-custom"></span>
+                                    Geography
+                                </label>
+                                <label class="subject-checkbox">
+                                    <input type="checkbox" value="physics">
+                                    <span class="checkbox-custom"></span>
+                                    Physics
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input" required>
+                                <span class="checkbox-custom"></span>
+                                I agree to the <a href="#" class="auth-link">Terms of Service</a> and <a href="#" class="auth-link">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                I would like to receive educational updates and tips via email
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn auth-btn">🚀 Create Account</button>
+
+                        <div class="auth-divider">
+                            <span>or sign up with</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="btn btn-social google">
+                                <span class="social-icon">🌐</span>
+                                Google
+                            </button>
+                            <button type="button" class="btn btn-social microsoft">
+                                <span class="social-icon">🏢</span>
+                                Microsoft
+                            </button>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="login.html" class="auth-link">Sign in here</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="auth-features">
+                    <h3>Start Your Learning Journey</h3>
+                    <div class="signup-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-number">1</div>
+                            <div class="benefit-content">
+                                <h4>Create Your Profile</h4>
+                                <p>Set up your personalized learning profile with your subjects and goals</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-number">2</div>
+                            <div class="benefit-content">
+                                <h4>Get AI-Powered Help</h4>
+                                <p>Ask questions through text, voice, or images and get instant explanations</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-number">3</div>
+                            <div class="benefit-content">
+                                <h4>Track Your Progress</h4>
+                                <p>Monitor your learning journey with detailed analytics and achievements</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-number">4</div>
+                            <div class="benefit-content">
+                                <h4>Interactive Learning</h4>
+                                <p>Engage with quizzes, story mode, and personalized assignments</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="signup-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Questions Answered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success/Error Messages -->
+            <div class="message-container">
+                <div class="message success-message" style="display: none;">
+                    <div class="message-icon">✅</div>
+                    <div class="message-content">
+                        <h4>Account Created Successfully!</h4>
+                        <p>Welcome to AI Classroom Assistant! Redirecting to your dashboard...</p>
+                    </div>
+                </div>
+
+                <div class="message error-message" style="display: none;">
+                    <div class="message-icon">❌</div>
+                    <div class="message-content">
+                        <h4>Registration Failed</h4>
+                        <p>Please check your information and try again.</p>
+                    </div>
+                </div>
+
+                <div class="message warning-message" style="display: none;">
+                    <div class="message-icon">⚠️</div>
+                    <div class="message-content">
+                        <h4>Passwords Don't Match</h4>
+                        <p>Please make sure both password fields are identical.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .subject-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-text);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .subject-checkbox:hover {
+            background-color: var(--accent-bg);
+        }
+
+        .subject-checkbox input[type="checkbox"] {
+            display: none;
+        }
+
+        .subject-checkbox .checkbox-custom {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border-color);
+            border-radius: 3px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .subject-checkbox input[type="checkbox"]:checked + .checkbox-custom {
+            background-color: var(--primary-accent);
+            border-color: var(--primary-accent);
+        }
+
+        .subject-checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+
+        .signup-benefits {
+            margin-bottom: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(5px);
+        }
+
+        .benefit-number {
+            background: linear-gradient(135deg, var(--primary-accent), var(--success-color));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h4 {
+            color: var(--accent-text);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .benefit-content p {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .signup-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .signup-stats .stat-item {
+            text-align: center;
+        }
+
+        .signup-stats .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .signup-stats .stat-label {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .warning-message {
+            background-color: var(--warning-color);
+            color: white;
+        }
+
+        @media (max-width: 968px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .subjects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .signup-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .benefit-number {
+                align-self: center;
+            }
+        }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.auth-form');
+        const firstName = document.getElementById('first-name');
+        const lastName = document.getElementById('last-name');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const successMsg = document.querySelector('.success-message');
+        const errorMsg = document.querySelector('.error-message');
+        const warningMsg = document.querySelector('.warning-message');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            warningMsg.style.display = 'none';
+            if (password.value !== confirmPassword.value) {
+                warningMsg.style.display = 'block';
+                return;
+            }
+            const username = email.value.trim();
+            const name = `${firstName.value.trim()} ${lastName.value.trim()}`;
+            try {
+                const res = await fetch('/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password: password.value, name })
+                });
+                const data = await res.json();
+                if (res.ok) {
+                    successMsg.style.display = 'block';
+                    setTimeout(() => { window.location.href = 'dashboard.html'; }, 1200);
+                } else {
+                    errorMsg.querySelector('p').textContent = data.error || 'Signup failed.';
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.querySelector('p').textContent = err.message;
+                errorMsg.style.display = 'block';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

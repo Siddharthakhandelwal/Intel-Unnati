@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Generator - AI Classroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assignment-generator.html" class="nav-link active">Assignment Generator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz-section.html" class="nav-link">Quiz Section</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Ask Query ▼</a>
+                    <div class="dropdown-content">
+                        <a href="ask-query.html?type=text">Text Query</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="homework-helper.html" class="nav-link">Homework Helper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">📝 Assignment Generator</h1>
+                <p class="page-subtitle">Create customized assignments based on subject and topic</p>
+            </section>
+
+            <!-- Assignment Generator Form -->
+            <section class="form-container">
+                <form class="assignment-form">
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" class="form-select" required>
+                            <option value="">Select a subject</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            <option value="geography">Geography</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="biology">Biology</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic" class="form-label">Topic</label>
+                        <input type="text" id="topic" class="form-input" placeholder="Enter the specific topic (e.g., Quadratic Equations, Photosynthesis)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty" class="form-label">Difficulty Level</label>
+                        <select id="difficulty" class="form-select" required>
+                            <option value="">Select difficulty</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question-count" class="form-label">Number of Questions</label>
+                        <select id="question-count" class="form-select" required>
+                            <option value="">Select number</option>
+                            <option value="5">5 Questions</option>
+                            <option value="10">10 Questions</option>
+                            <option value="15">15 Questions</option>
+                            <option value="20">20 Questions</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignment-type" class="form-label">Assignment Type</label>
+                        <select id="assignment-type" class="form-select" required>
+                            <option value="">Select type</option>
+                            <option value="mcq">Multiple Choice Questions</option>
+                            <option value="short-answer">Short Answer Questions</option>
+                            <option value="essay">Essay Questions</option>
+                            <option value="problem-solving">Problem Solving</option>
+                            <option value="mixed">Mixed Format</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additional-notes" class="form-label">Additional Instructions (Optional)</label>
+                        <textarea id="additional-notes" class="form-textarea" placeholder="Any specific requirements or focus areas for the assignment..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Generate Assignment</button>
+                </form>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section" style="margin-top: 3rem;">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>📋 Generated Assignment</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="assignment-preview">
+                            <div class="assignment-header">
+                                <h4 style="color: var(--accent-text); margin-bottom: 1rem;">Mathematics - Quadratic Equations</h4>
+                                <div class="assignment-meta">
+                                    <span class="meta-item">📚 Subject: Mathematics</span>
+                                    <span class="meta-item">🎯 Difficulty: Intermediate</span>
+                                    <span class="meta-item">📝 Questions: 10</span>
+                                    <span class="meta-item">⏱️ Time: 60 minutes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="assignment-content">
+                                <h5 style="color: var(--primary-accent); margin: 1.5rem 0 1rem 0;">Instructions:</h5>
+                                <p style="color: var(--secondary-text); margin-bottom: 1.5rem;">
+                                    Answer all questions. Show your work for full credit. Use proper mathematical notation.
+                                </p>
+
+                                <h5 style="color: var(--primary-accent); margin: 1.5rem 0 1rem 0;">Questions:</h5>
+                                <div class="question-list">
+                                    <div class="question-item">
+                                        <strong>1.</strong> Solve the quadratic equation: x² + 5x + 6 = 0
+                                    </div>
+                                    <div class="question-item">
+                                        <strong>2.</strong> Find the discriminant of 2x² - 4x + 1 = 0
+                                    </div>
+                                    <div class="question-item">
+                                        <strong>3.</strong> Graph the parabola y = x² - 4x + 3
+                                    </div>
+                                    <div class="question-item">
+                                        <strong>4.</strong> Find the vertex of the parabola y = -2x² + 8x - 6
+                                    </div>
+                                    <div class="question-item">
+                                        <strong>5.</strong> Solve by completing the square: x² - 6x + 5 = 0
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="assignment-actions" style="margin-top: 2rem; display: flex; gap: 1rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .assignment-preview {
+            padding: 1rem;
+            background-color: var(--accent-bg);
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .assignment-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-item {
+            background-color: var(--secondary-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
+
+        .question-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-accent);
+        }
+
+        @media (max-width: 768px) {
+            .assignment-meta {
+                flex-direction: column;
+            }
+            
+            .assignment-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.assignment-form');
+        const previewHeader = document.querySelector('.assignment-header h4');
+        const metaItems = document.querySelector('.assignment-meta');
+        const questionList = document.querySelector('.question-list');
+        const instructions = document.querySelector('.assignment-content p');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const subject = document.getElementById('subject').value;
+            const topic = document.getElementById('topic').value;
+            const difficulty = document.getElementById('difficulty').value;
+            const number_of_questions = document.getElementById('question-count').value;
+            const assignment_type = document.getElementById('assignment-type').value;
+            const notes = document.getElementById('additional-notes').value;
+            previewHeader.textContent = `${subject} - ${topic}`;
+            metaItems.innerHTML = `<span class='meta-item'>📚 Subject: ${subject}</span><span class='meta-item'>🎯 Difficulty: ${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</span><span class='meta-item'>📝 Questions: ${number_of_questions}</span><span class='meta-item'>⏱️ Time: 60 minutes</span>`;
+            instructions.textContent = notes || 'Answer all questions. Show your work for full credit. Use proper mathematical notation.';
+            questionList.innerHTML = '<div style="padding:1rem">Generating assignment...</div>';
+            try {
+                const res = await fetch('/generate-assignment', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ subject, topic, difficulty, number_of_questions, assignment_type })
+                });
+                const data = await res.json();
+                if (data.questions && Array.isArray(data.questions)) {
+                    questionList.innerHTML = data.questions.map((q, i) => `<div class='question-item'><strong>${i+1}.</strong> ${q}</div>`).join('');
+                } else {
+                    questionList.innerHTML = `<div style='color:red'>Failed to generate assignment.</div>`;
+                }
+            } catch (err) {
+                questionList.innerHTML = `<div style='color:red'>Error: ${err.message}</div>`;
+            }
+        });
+    });
+    </script>
+</body>
+</html>

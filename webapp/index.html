@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Classroom Assistant - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assignment-generator.html" class="nav-link">Assignment Generator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz-section.html" class="nav-link">Quiz Section</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Ask Query ▼</a>
+                    <div class="dropdown-content">
+                        <a href="ask-query.html?type=text">Text Query</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="homework-helper.html" class="nav-link">Homework Helper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1 class="welcome-title">Hi Jyotsana! Ask me anything.</h1>
+                <p class="welcome-subtitle">Your AI-powered learning companion is here to help you succeed.</p>
+            </section>
+
+            <!-- Dashboard Cards -->
+            <section class="dashboard-grid">
+                <!-- Attendance Summary -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>📊 Attendance Summary</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="attendance-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">This Week</span>
+                                <span class="stat-value">85%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">This Month</span>
+                                <span class="stat-value">92%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Overall</span>
+                                <span class="stat-value">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Chart -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>📈 Overall Performance</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="performance-chart">
+                            <div class="chart-bar">
+                                <span class="subject">Math</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 85%"></div>
+                                    <span class="percentage">85%</span>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="subject">Science</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 92%"></div>
+                                    <span class="percentage">92%</span>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="subject">English</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 78%"></div>
+                                    <span class="percentage">78%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="dashboard-card quick-access">
+                    <div class="card-header">
+                        <h3>⚡ Quick Access</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="quick-buttons">
+                            <a href="assignment-generator.html" class="quick-btn">
+                                <span class="btn-icon">📝</span>
+                                <span class="btn-text">Assignment Generator</span>
+                            </a>
+                            <a href="quiz-section.html" class="quick-btn">
+                                <span class="btn-icon">🧠</span>
+                                <span class="btn-text">Quiz Section</span>
+                            </a>
+                            <a href="ask-query.html" class="quick-btn">
+                                <span class="btn-icon">❓</span>
+                                <span class="btn-text">Ask Query</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>🕒 Recent Activity</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-icon">📝</span>
+                                <div class="activity-details">
+                                    <span class="activity-title">Completed Math Assignment</span>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🧠</span>
+                                <div class="activity-details">
+                                    <span class="activity-title">Scored 85% in Science Quiz</span>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">❓</span>
+                                <div class="activity-details">
+                                    <span class="activity-title">Asked about Photosynthesis</span>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

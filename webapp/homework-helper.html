@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Helper - AI Classroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assignment-generator.html" class="nav-link">Assignment Generator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="story-mode.html" class="nav-link">Story Mode Learning</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Ask Query ▼</a>
+                    <div class="dropdown-content">
+                        <a href="ask-query.html?type=text">Text Query</a>
+                        <a href="ask-query.html?type=voice">Voice Query</a>
+                        <a href="ask-query.html?type=image">Image Query</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="homework-helper.html" class="nav-link active">Homework Helper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz-section.html" class="nav-link">Quiz Section</a>
+                </li>
+                <li class="nav-item">
+                    <a href="knowledge-base.html" class="nav-link">Knowledge Base</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Dashboard ▼</a>
+                    <div class="dropdown-content">
+                        <a href="dashboard.html?section=profile">Profile</a>
+                        <a href="dashboard.html?section=history">Query History</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">🎓 Homework Helper</h1>
+                <p class="page-subtitle">Get step-by-step solutions and explanations for your homework</p>
+            </section>
+
+            <!-- Homework Input Form -->
+            <section class="homework-form-section">
+                <div class="form-container">
+                    <form class="homework-form">
+                        <div class="form-group">
+                            <label for="homework-subject" class="form-label">Subject</label>
+                            <select id="homework-subject" class="form-select" required>
+                                <option value="">Select your subject</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="algebra">Algebra</option>
+                                <option value="geometry">Geometry</option>
+                                <option value="calculus">Calculus</option>
+                                <option value="physics">Physics</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="biology">Biology</option>
+                                <option value="english">English Literature</option>
+                                <option value="history">History</option>
+                                <option value="geography">Geography</option>
+                                <option value="computer-science">Computer Science</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="homework-topic" class="form-label">Topic/Chapter</label>
+                            <input type="text" id="homework-topic" class="form-input" placeholder="e.g., Quadratic Equations, Photosynthesis, World War II" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="homework-question" class="form-label">Your Question</label>
+                            <textarea id="homework-question" class="form-textarea" placeholder="Paste your homework question here or describe what you need help with..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="help-level" class="form-label">Type of Help Needed</label>
+                            <select id="help-level" class="form-select" required>
+                                <option value="">Choose help type</option>
+                                <option value="hint">Just a hint to get started</option>
+                                <option value="step-guide">Step-by-step guidance</option>
+                                <option value="full-solution">Complete solution with explanation</option>
+                                <option value="concept-review">Concept review and examples</option>
+                                <option value="practice-problems">Similar practice problems</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="difficulty-level" class="form-label">Difficulty Level</label>
+                            <select id="difficulty-level" class="form-select">
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate" selected>Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn">🔍 Get Help</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Help Response Section -->
+            <section class="help-response-section">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>💡 AI Homework Solution</h3>
+                        <span class="response-badge">Mathematics - Quadratic Equations</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="problem-statement">
+                            <h4>📋 Problem:</h4>
+                            <div class="problem-text">
+                                Solve the quadratic equation: 3x² - 12x + 9 = 0
+                            </div>
+                        </div>
+
+                        <div class="solution-content">
+                            <h4>🔧 Step-by-Step Solution:</h4>
+                            
+                            <div class="solution-steps">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Identify the coefficients</h5>
+                                        <p>From the equation 3x² - 12x + 9 = 0:</p>
+                                        <ul>
+                                            <li>a = 3 (coefficient of x²)</li>
+                                            <li>b = -12 (coefficient of x)</li>
+                                            <li>c = 9 (constant term)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Apply the quadratic formula</h5>
+                                        <div class="formula-box">
+                                            x = (-b ± √(b² - 4ac)) / 2a
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Calculate the discriminant</h5>
+                                        <p>b² - 4ac = (-12)² - 4(3)(9) = 144 - 108 = 36</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-item">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h5>Substitute values</h5>
+                                        <p>x = (12 ± √36) / 6 = (12 ± 6) / 6</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-item">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h5>Final solutions</h5>
+                                        <div class="solution-box">
+                                            <p>x₁ = (12 + 6) / 6 = 18 / 6 = 3</p>
+                                            <p>x₂ = (12 - 6) / 6 = 6 / 6 = 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="verification">
+                                <h4>✅ Verification:</h4>
+                                <p>Let's check our answers:</p>
+                                <div class="verification-steps">
+                                    <p><strong>For x = 3:</strong> 3(3)² - 12(3) + 9 = 27 - 36 + 9 = 0 ✓</p>
+                                    <p><strong>For x = 1:</strong> 3(1)² - 12(1) + 9 = 3 - 12 + 9 = 0 ✓</p>
+                                </div>
+                            </div>
+
+                            <div class="key-concepts">
+                                <h4>🎯 Key Concepts to Remember:</h4>
+                                <ul>
+                                    <li>The quadratic formula works for any quadratic equation</li>
+                                    <li>The discriminant (b² - 4ac) tells us about the nature of roots</li>
+                                    <li>Always verify your solutions by substituting back</li>
+                                    <li>If discriminant > 0: two real solutions</li>
+                                </ul>
+                            </div>
+
+                            <div class="related-topics">
+                                <h4>📚 Related Topics:</h4>
+                                <div class="topic-tags">
+                                    <span class="topic-tag">Factoring Quadratics</span>
+                                    <span class="topic-tag">Completing the Square</span>
+                                    <span class="topic-tag">Graphing Parabolas</span>
+                                    <span class="topic-tag">Discriminant Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="response-actions">
+                            <button class="btn">📝 Generate Practice Problems</button>
+                            <button class="btn btn-secondary">💾 Save Solution</button>
+                            <button class="btn btn-secondary">🔄 Ask Follow-up</button>
+                            <button class="btn btn-secondary">📊 View Similar Problems</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Help History -->
+            <section class="help-history-section">
+                <h2 style="color: var(--accent-text); margin-bottom: 2rem; text-align: center;">📖 Recent Help Sessions</h2>
+                <div class="history-grid">
+                    <div class="history-card">
+                        <div class="history-header">
+                            <h4>Physics - Newton's Laws</h4>
+                            <span class="history-time">2 hours ago</span>
+                        </div>
+                        <div class="history-content">
+                            <p class="history-question">Calculate the force needed to accelerate a 10kg object at 5m/s²</p>
+                            <div class="history-status">
+                                <span class="status-badge completed">✅ Completed</span>
+                                <span class="help-type">Step-by-step guidance</span>
+                            </div>
+                        </div>
+                        <div class="history-footer">
+                            <button class="btn-small">View Solution</button>
+                        </div>
+                    </div>
+
+                    <div class="history-card">
+                        <div class="history-header">
+                            <h4>Chemistry - Balancing Equations</h4>
+                            <span class="history-time">1 day ago</span>
+                        </div>
+                        <div class="history-content">
+                            <p class="history-question">Balance: C₂H₆ + O₂ → CO₂ + H₂O</p>
+                            <div class="history-status">
+                                <span class="status-badge completed">✅ Completed</span>
+                                <span class="help-type">Complete solution</span>
+                            </div>
+                        </div>
+                        <div class="history-footer">
+                            <button class="btn-small">View Solution</button>
+                        </div>
+                    </div>
+
+                    <div class="history-card">
+                        <div class="history-header">
+                            <h4>English - Essay Structure</h4>
+                            <span class="history-time">3 days ago</span>
+                        </div>
+                        <div class="history-content">
+                            <p class="history-question">How to write a persuasive essay about climate change?</p>
+                            <div class="history-status">
+                                <span class="status-badge completed">✅ Completed</span>
+                                <span class="help-type">Concept review</span>
+                            </div>
+                        </div>
+                        <div class="history-footer">
+                            <button class="btn-small">View Solution</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .homework-form-section {
+            margin-bottom: 3rem;
+        }
+
+        .response-badge {
+            background-color: var(--primary-accent);
+            color: var(--accent-text);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .problem-statement {
+            background-color: var(--accent-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .problem-statement h4 {
+            color: var(--accent-text);
+            margin-bottom: 1rem;
+        }
+
+        .problem-text {
+            background-color: var(--secondary-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+        }
+
+        .solution-content h4 {
+            color: var(--primary-accent);
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        .solution-steps {
+            margin: 2rem 0;
+        }
+
+        .step-item {
+            display: flex;
+            margin-bottom: 2rem;
+            background-color: var(--accent-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .step-number {
+            background-color: var(--primary-accent);
+            color: var(--accent-text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h5 {
+            color: var(--accent-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .step-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .formula-box,
+        .solution-box {
+            background-color: var(--secondary-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+        }
+
+        .verification {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 2px solid var(--success-color);
+        }
+
+        .verification h4 {
+            color: var(--success-color);
+            margin-bottom: 1rem;
+        }
+
+        .verification-steps p {
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .key-concepts {
+            background-color: var(--accent-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .key-concepts h4 {
+            color: var(--primary-accent);
+            margin-bottom: 1rem;
+        }
+
+        .key-concepts ul {
+            padding-left: 2rem;
+        }
+
+        .key-concepts li {
+            margin-bottom: 0.5rem;
+        }
+
+        .related-topics {
+            margin: 2rem 0;
+        }
+
+        .related-topics h4 {
+            color: var(--primary-accent);
+            margin-bottom: 1rem;
+        }
+
+        .topic-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .topic-tag {
+            background-color: var(--secondary-bg);
+            color: var(--primary-text);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .topic-tag:hover {
+            background-color: var(--primary-accent);
+            color: var(--accent-text);
+        }
+
+        .help-history-section {
+            margin-top: 4rem;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .history-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .history-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .history-header h4 {
+            color: var(--accent-text);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .history-time {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .history-question {
+            color: var(--primary-text);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .history-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .status-badge.completed {
+            background-color: var(--success-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .help-type {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .history-footer {
+            text-align: center;
+        }
+
+        .btn-small {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-accent);
+            color: var(--accent-text);
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-small:hover {
+            background-color: #3a8ce6;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .step-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto 1rem auto;
+            }
+            
+            .history-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .history-status {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+            
+            .topic-tags {
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html>

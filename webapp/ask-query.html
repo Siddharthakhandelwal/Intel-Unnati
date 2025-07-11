@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Query - AI Classroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assignment-generator.html" class="nav-link">Assignment Generator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz-section.html" class="nav-link">Quiz Section</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Ask Query ▼</a>
+                    <div class="dropdown-content">
+                        <a href="ask-query.html?type=text">Text Query</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="homework-helper.html" class="nav-link">Homework Helper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">❓ Ask Query</h1>
+                <p class="page-subtitle">Get instant answers through text, voice, or image queries</p>
+            </section>
+
+            <!-- Tab Navigation -->
+            <section class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="text">📝 Text Query</button>
+                    <button class="tab-button" data-tab="image">🖼️ Math Image Query</button>
+                </div>
+
+                <!-- Text Query Tab -->
+                <div class="tab-content active" id="text-tab">
+                    <div class="query-container">
+                        <div class="query-input-section">
+                            <div class="form-group">
+                                <label for="text-query" class="form-label">What would you like to know?</label>
+                                <textarea id="text-query" class="form-textarea" placeholder="Type your question here... (e.g., Explain photosynthesis, How do I solve quadratic equations?, What caused World War I?)"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject-filter" class="form-label">Subject (Optional)</label>
+                                <select id="subject-filter" class="form-select">
+                                    <option value="">All Subjects</option>
+                                    <option value="mathematics">Mathematics</option>
+                                    <option value="science">Science</option>
+                                    <option value="english">English</option>
+                                    <option value="history">History</option>
+                                    <option value="geography">Geography</option>
+                                </select>
+                            </div>
+                            <button class="btn">🔍 Ask Question</button>
+                        </div>
+
+                        <div class="query-response">
+                            <div class="response-card">
+                                <div class="response-header">
+                                    <h4>💡 AI Response</h4>
+                                    <span class="response-time">Answered in 2.3 seconds</span>
+                                </div>
+                                <div class="response-content">
+                                    <div class="question-display">
+                                        <strong>Your Question:</strong> "Explain the process of photosynthesis"
+                                    </div>
+                                    <div class="answer-content">
+                                        <p><strong>Photosynthesis</strong> is the process by which plants convert light energy into chemical energy. Here's how it works:</p>
+                                        
+                                        <h5>📍 Key Components:</h5>
+                                        <ul>
+                                            <li><strong>Chloroplasts:</strong> Organelles where photosynthesis occurs</li>
+                                            <li><strong>Chlorophyll:</strong> Green pigment that captures light energy</li>
+                                            <li><strong>Sunlight:</strong> Energy source for the process</li>
+                                        </ul>
+
+                                        <h5>⚡ The Process:</h5>
+                                        <div class="process-steps">
+                                            <div class="step">
+                                                <strong>1. Light Reactions:</strong> Chlorophyll absorbs sunlight and splits water molecules
+                                            </div>
+                                            <div class="step">
+                                                <strong>2. Calvin Cycle:</strong> Carbon dioxide is converted into glucose using the energy from step 1
+                                            </div>
+                                        </div>
+
+                                        <h5>🧮 Chemical Equation:</h5>
+                                        <div class="equation">
+                                            6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂
+                                        </div>
+
+                                        <h5>🌱 Importance:</h5>
+                                        <p>Photosynthesis produces oxygen and glucose, making it essential for life on Earth.</p>
+                                    </div>
+                                </div>
+                                <div class="response-actions">
+                                    <button class="btn btn-secondary">👍 Helpful</button>
+                                    <button class="btn btn-secondary">💾 Save Response</button>
+                                    <button class="btn btn-secondary">🔄 Ask Follow-up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Query Tab -->
+                <div class="tab-content" id="image-tab">
+                    <div class="query-container">
+                        <div class="image-upload-section">
+                            <div class="upload-area">
+                                <div class="upload-icon">📸</div>
+                                <h4>Upload a Math Problem Image</h4>
+                                <p>Upload a photo of a math problem you need help with</p>
+                                <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                                <button class="btn" onclick="document.getElementById('image-upload').click()">📤 Choose Image</button>
+                            </div>
+                        </div>
+                        <div class="query-response">
+                            <div class="response-card">
+                                <div class="response-header">
+                                    <h4>🎯 Math Image Solution</h4>
+                                </div>
+                                <div class="response-content">
+                                    <div class="answer-content">
+                                        <p>Upload an image to get the solution.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .query-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .query-input-section {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .query-response {
+            margin-top: 2rem;
+        }
+
+        .response-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .response-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .response-header h4 {
+            color: var(--accent-text);
+            margin: 0;
+        }
+
+        .response-time {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .question-display {
+            background-color: var(--accent-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-accent);
+        }
+
+        .answer-content {
+            line-height: 1.6;
+        }
+
+        .answer-content h5 {
+            color: var(--primary-accent);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .answer-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .answer-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .process-steps {
+            margin: 1rem 0;
+        }
+
+        .step {
+            background-color: var(--accent-bg);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .equation {
+            background-color: var(--secondary-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .response-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Voice Interface Styles */
+        .voice-interface {
+            text-align: center;
+        }
+
+        .voice-visualizer {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .mic-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mic-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-accent), var(--success-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mic-button:hover {
+            transform: scale(1.1);
+        }
+
+        .mic-icon {
+            font-size: 3rem;
+        }
+
+        .voice-status {
+            color: var(--secondary-text);
+            font-size: 1.1rem;
+        }
+
+        .voice-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .voice-btn {
+            padding: 1rem 2rem;
+        }
+
+        .transcript-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .transcript-text {
+            background-color: var(--accent-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .comparison-table {
+            display: grid;
+            gap: 1px;
+            background-color: var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1px;
+        }
+
+        .comparison-header,
+        .comparison-col {
+            background-color: var(--accent-bg);
+            padding: 1rem;
+        }
+
+        .comparison-header {
+            background-color: var(--secondary-bg);
+            font-weight: 600;
+        }
+
+        /* Image Upload Styles */
+        .upload-area {
+            background-color: var(--card-bg);
+            border: 2px dashed var(--border-color);
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary-accent);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .upload-area h4 {
+            color: var(--accent-text);
+            margin-bottom: 1rem;
+        }
+
+        .upload-area p {
+            color: var(--secondary-text);
+            margin-bottom: 2rem;
+        }
+
+        .preview-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .preview-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .preview-header h4 {
+            color: var(--accent-text);
+        }
+
+        .image-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .image-placeholder {
+            background-color: var(--accent-bg);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.5rem;
+        }
+
+        .image-analysis h5 {
+            color: var(--primary-accent);
+            margin-bottom: 1rem;
+        }
+
+        .image-analysis ul {
+            padding-left: 2rem;
+        }
+
+        .solution-steps {
+            margin: 1rem 0;
+        }
+
+        .step-detail {
+            background-color: var(--secondary-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            margin-top: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            .tab-buttons {
+                flex-direction: column;
+            }
+            
+            .response-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .response-actions {
+                flex-direction: column;
+            }
+            
+            .voice-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-header {
+                background-color: var(--primary-accent);
+                color: var(--accent-text);
+            }
+        }
+    </style>
+<script>
+// --- Chatbot Text Query Integration ---
+document.addEventListener('DOMContentLoaded', function() {
+    // Text Query
+    const askBtn = document.querySelector('#text-tab .btn');
+    const textArea = document.getElementById('text-query');
+    const subjectFilter = document.getElementById('subject-filter');
+    const responseCard = document.querySelector('#text-tab .response-card');
+    const questionDisplay = responseCard.querySelector('.question-display');
+    const answerContent = responseCard.querySelector('.answer-content');
+    const responseTime = responseCard.querySelector('.response-time');
+
+    if (askBtn) {
+        askBtn.addEventListener('click', async function() {
+            const query = textArea.value.trim();
+            const subject = subjectFilter.value;
+            if (!query) {
+                answerContent.innerHTML = '<span style="color:red">Please enter a question.</span>';
+                return;
+            }
+            questionDisplay.innerHTML = `<strong>Your Question:</strong> "${query}"`;
+            answerContent.innerHTML = '<em>Loading...</em>';
+            const start = performance.now();
+            try {
+                const res = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: subject ? `${query} (Subject: ${subject})` : query })
+                });
+                const data = await res.json();
+                if (data.response) {
+                    answerContent.innerHTML = `<p>${data.response.replace(/\n/g, '<br>')}</p>`;
+                } else {
+                    answerContent.innerHTML = `<span style='color:red'>${data.error || 'No response from server.'}</span>`;
+                }
+            } catch (err) {
+                answerContent.innerHTML = `<span style='color:red'>Error: ${err.message}</span>`;
+            }
+            const end = performance.now();
+            responseTime.textContent = `Answered in ${(end - start) / 1000} seconds`;
+        });
+    }
+
+    // --- Math Image Solver Integration ---
+    const imageInput = document.getElementById('image-upload');
+    const imageTab = document.getElementById('image-tab');
+    const imageBtn = imageTab.querySelector('.upload-area .btn');
+    const imageAnswerContent = imageTab.querySelector('.answer-content');
+    if (imageInput && imageBtn) {
+        imageInput.addEventListener('change', async function() {
+            if (!imageInput.files.length) return;
+            const file = imageInput.files[0];
+            imageAnswerContent.innerHTML = '<em>Solving...</em>';
+            const formData = new FormData();
+            formData.append('image', file);
+            try {
+                const res = await fetch('/solve-math', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await res.json();
+                if (data.result) {
+                    imageAnswerContent.innerHTML = `<p><strong>Solution:</strong> ${data.result}</p>`;
+                } else {
+                    imageAnswerContent.innerHTML = `<span style='color:red'>${data.error || 'No response from server.'}</span>`;
+                }
+            } catch (err) {
+                imageAnswerContent.innerHTML = `<span style='color:red'>Error: ${err.message}</span>`;
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Section - AI Classroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assignment-generator.html" class="nav-link">Assignment Generator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz-section.html" class="nav-link active">Quiz Section</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Ask Query ▼</a>
+                    <div class="dropdown-content">
+                        <a href="ask-query.html?type=text">Text Query</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="homework-helper.html" class="nav-link">Homework Helper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">🧠 Quiz Section</h1>
+                <p class="page-subtitle">Test your knowledge with interactive quizzes across different subjects</p>
+            </section>
+
+            <!-- Quiz Selection -->
+            <section class="quiz-selection">
+                <div class="form-container">
+                    <h3 style="color: var(--accent-text); margin-bottom: 2rem; text-align: center;">📋 Start a New Quiz</h3>
+                    <form class="quiz-form">
+                        <div class="form-group">
+                            <label for="quiz-subject" class="form-label">Select Subject</label>
+                            <select id="quiz-subject" class="form-select" required>
+                                <option value="">Choose a subject</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="physics">Physics</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="biology">Biology</option>
+                                <option value="english">English</option>
+                                <option value="history">History</option>
+                                <option value="geography">Geography</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quiz-topic" class="form-label">Topic (Optional)</label>
+                            <input type="text" id="quiz-topic" class="form-input" placeholder="e.g., Quadratic Equations, Photosynthesis">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quiz-difficulty" class="form-label">Difficulty Level</label>
+                            <select id="quiz-difficulty" class="form-select" required>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate" selected>Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="question-count" class="form-label">Number of Questions</label>
+                            <select id="question-count" class="form-select" required>
+                                <option value="5">5 Questions</option>
+                                <option value="10" selected>10 Questions</option>
+                                <option value="15">15 Questions</option>
+                                <option value="20">20 Questions</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn">🚀 Start Quiz</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Active Quiz Section -->
+            <section class="active-quiz-section">
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <div class="quiz-info">
+                            <h3>Mathematics Quiz - Algebra</h3>
+                            <div class="quiz-meta">
+                                <span class="quiz-progress">Question 3 of 10</span>
+                                <span class="quiz-time">⏱️ 15:30</span>
+                                <span class="quiz-score">Score: 80%</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Current Question -->
+                    <div class="question-card">
+                        <div class="question-header">
+                            <h4 class="question-title">Question 3 of 10</h4>
+                            <span class="question-points">Points: 10</span>
+                        </div>
+                        
+                        <div class="question-content">
+                            <p class="question-text">
+                                What is the solution to the equation 2x + 5 = 13?
+                            </p>
+                        </div>
+
+                        <div class="question-options">
+                            <ul class="options-list">
+                                <li class="option-item">
+                                    <label class="option-label">
+                                        <input type="radio" name="question3" value="a" class="option-radio">
+                                        <span class="option-text">x = 3</span>
+                                    </label>
+                                </li>
+                                <li class="option-item">
+                                    <label class="option-label">
+                                        <input type="radio" name="question3" value="b" class="option-radio">
+                                        <span class="option-text">x = 4</span>
+                                    </label>
+                                </li>
+                                <li class="option-item">
+                                    <label class="option-label">
+                                        <input type="radio" name="question3" value="c" class="option-radio">
+                                        <span class="option-text">x = 5</span>
+                                    </label>
+                                </li>
+                                <li class="option-item">
+                                    <label class="option-label">
+                                        <input type="radio" name="question3" value="d" class="option-radio">
+                                        <span class="option-text">x = 6</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn btn-secondary">⬅️ Previous</button>
+                            <button class="btn">Next ➡️</button>
+                            <button class="btn btn-secondary">💾 Save & Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Results Section -->
+            <section class="quiz-results-section" style="margin-top: 3rem;">
+                <div class="dashboard-card" id="quiz-results-container" style="display:none;"></div>
+            </section>
+
+            <!-- Recent Quizzes -->
+            <section class="recent-quizzes-section">
+                <h2 style="color: var(--accent-text); margin-bottom: 2rem; text-align: center;">📚 Recent Quizzes</h2>
+                <div class="quizzes-grid">
+                    <div class="quiz-history-card">
+                        <div class="quiz-history-header">
+                            <h4>Science - Physics</h4>
+                            <span class="quiz-date">Today</span>
+                        </div>
+                        <div class="quiz-history-content">
+                            <div class="quiz-stats">
+                                <span class="stat">📝 15 Questions</span>
+                                <span class="stat">⏱️ 18:30</span>
+                                <span class="stat">🎯 Intermediate</span>
+                            </div>
+                            <div class="quiz-score-display">
+                                <span class="score-percentage">92%</span>
+                                <span class="score-grade">A</span>
+                            </div>
+                        </div>
+                        <div class="quiz-history-footer">
+                            <button class="btn-small">📊 View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-history-card">
+                        <div class="quiz-history-header">
+                            <h4>Mathematics - Geometry</h4>
+                            <span class="quiz-date">Yesterday</span>
+                        </div>
+                        <div class="quiz-history-content">
+                            <div class="quiz-stats">
+                                <span class="stat">📝 10 Questions</span>
+                                <span class="stat">⏱️ 12:15</span>
+                                <span class="stat">🎯 Advanced</span>
+                            </div>
+                            <div class="quiz-score-display">
+                                <span class="score-percentage">78%</span>
+                                <span class="score-grade">B+</span>
+                            </div>
+                        </div>
+                        <div class="quiz-history-footer">
+                            <button class="btn-small">📊 View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-history-card">
+                        <div class="quiz-history-header">
+                            <h4>Biology - Cell Structure</h4>
+                            <span class="quiz-date">2 days ago</span>
+                        </div>
+                        <div class="quiz-history-content">
+                            <div class="quiz-stats">
+                                <span class="stat">📝 20 Questions</span>
+                                <span class="stat">⏱️ 25:40</span>
+                                <span class="stat">🎯 Beginner</span>
+                            </div>
+                            <div class="quiz-score-display">
+                                <span class="score-percentage">95%</span>
+                                <span class="score-grade">A+</span>
+                            </div>
+                        </div>
+                        <div class="quiz-history-footer">
+                            <button class="btn-small">📊 View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .quiz-selection {
+            margin-bottom: 3rem;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quiz-header {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .quiz-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-info h3 {
+            color: var(--accent-text);
+            margin: 0;
+        }
+
+        .quiz-meta {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
+
+        .quiz-progress {
+            color: var(--primary-accent);
+            font-weight: 600;
+        }
+
+        .quiz-time {
+            color: var(--warning-color);
+            font-weight: 600;
+        }
+
+        .quiz-score {
+            color: var(--success-color);
+            font-weight: 600;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-title {
+            color: var(--accent-text);
+            margin: 0;
+        }
+
+        .question-points {
+            background-color: var(--primary-accent);
+            color: var(--accent-text);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--primary-text);
+        }
+
+        .question-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .result-badge {
+            background-color: var(--success-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .results-summary {
+            margin-bottom: 3rem;
+        }
+
+        .score-display {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-accent), var(--success-color));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .score-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .score-label {
+            font-size: 1rem;
+        }
+
+        .score-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--accent-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            min-width: 200px;
+        }
+
+        .score-metric {
+            color: var(--secondary-text);
+        }
+
+        .score-number {
+            color: var(--accent-text);
+            font-weight: 600;
+        }
+
+        .detailed-results {
+            margin: 2rem 0;
+        }
+
+        .result-item {
+            background-color: var(--accent-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--border-color);
+        }
+
+        .result-item.correct {
+            border-left-color: var(--success-color);
+        }
+
+        .result-item.incorrect {
+            border-left-color: var(--error-color);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .question-num {
+            font-weight: 600;
+            color: var(--accent-text);
+        }
+
+        .result-status {
+            font-weight: 600;
+        }
+
+        .result-question {
+            color: var(--primary-text);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .result-answer {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .your-answer {
+            color: var(--secondary-text);
+        }
+
+        .correct-answer {
+            color: var(--success-color);
+            font-weight: 600;
+        }
+
+        .explanation {
+            background-color: var(--secondary-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            color: var(--secondary-text);
+            line-height: 1.5;
+        }
+
+        .results-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .quizzes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .quiz-history-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .quiz-history-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .quiz-history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-history-header h4 {
+            color: var(--accent-text);
+            margin: 0;
+        }
+
+        .quiz-date {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .quiz-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .quiz-stats .stat {
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+        }
+
+        .quiz-score-display {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .score-percentage {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--success-color);
+        }
+
+        .score-grade {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-accent);
+            background-color: var(--secondary-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .quiz-history-footer {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .quiz-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .question-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .question-actions {
+                flex-direction: column;
+            }
+            
+            .score-display {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .result-answer {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .results-actions {
+                flex-direction: column;
+            }
+            
+            .quiz-stats {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quizForm = document.querySelector('.quiz-form');
+    const quizSubject = document.getElementById('quiz-subject');
+    const quizTopic = document.getElementById('quiz-topic');
+    const questionCount = document.getElementById('question-count');
+    const quizContainer = document.querySelector('.active-quiz-section .quiz-container');
+    if (quizForm) {
+        quizForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const subject = quizSubject.value;
+            const topic = quizTopic.value || subject;
+            const num_questions = parseInt(questionCount.value, 10);
+            quizContainer.innerHTML = '<div style="text-align:center;padding:2rem"><em>Generating quiz...</em></div>';
+            try {
+                const res = await fetch('/generate-quiz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ topic, num_questions })
+                });
+                const data = await res.json();
+                if (data.quiz && Array.isArray(data.quiz)) {
+                    let html = '<form class="generated-quiz-form">';
+                    data.quiz.forEach((q, i) => {
+                        html += `<div class='question-card'><div class='question-header'><h4 class='question-title'>Q${i+1}: ${q.question}</h4></div><div class='question-content'>`;
+                        if (q.type === 'mcq' || q.type === 'fill_blank') {
+                            html += '<ul class="options-list">';
+                            q.options.forEach((opt, j) => {
+                                html += `<li class='option-item'><label class='option-label'><input type='radio' name='q${i}' value='${opt}' class='option-radio'><span class='option-text'>${opt}</span></label></li>`;
+                            });
+                            html += '</ul>';
+                        } else if (q.type === 'true_false') {
+                            html += `<ul class='options-list'><li class='option-item'><label class='option-label'><input type='radio' name='q${i}' value='True' class='option-radio'><span class='option-text'>True</span></label></li><li class='option-item'><label class='option-label'><input type='radio' name='q${i}' value='False' class='option-radio'><span class='option-text'>False</span></label></li></ul>`;
+                        }
+                        html += '</div></div>';
+                    });
+                    html += '<button type="submit" class="btn">Submit Quiz</button></form>';
+                    quizContainer.innerHTML = html;
+                } else {
+                    quizContainer.innerHTML = `<div style='color:red;text-align:center;padding:2rem'>${data.error || 'Failed to generate quiz.'}</div>`;
+                }
+            } catch (err) {
+                quizContainer.innerHTML = `<div style='color:red;text-align:center;padding:2rem'>Error: ${err.message}</div>`;
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

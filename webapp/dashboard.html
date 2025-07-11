@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Classroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Classroom Assistant</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assignment-generator.html" class="nav-link">Assignment Generator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz-section.html" class="nav-link">Quiz Section</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Ask Query ▼</a>
+                    <div class="dropdown-content">
+                        <a href="ask-query.html?type=text">Text Query</a>
+                        <a href="ask-query.html?type=voice">Voice Query</a>
+                        <a href="ask-query.html?type=image">Image Query</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="homework-helper.html" class="nav-link">Homework Helper</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Dashboard ▼</a>
+                    <div class="dropdown-content">
+                        <a href="dashboard.html?section=profile">Profile</a>
+                        <a href="dashboard.html?section=history">Query History</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">📊 Dashboard</h1>
+                <p class="page-subtitle">Manage your profile and track your learning progress</p>
+            </section>
+
+            <!-- Dashboard Navigation Tabs -->
+            <section class="dashboard-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="profile">👤 Profile</button>
+                    <button class="tab-button" data-tab="history">📜 Query History</button>
+                    <button class="tab-button" data-tab="progress">📈 Progress</button>
+                    <button class="tab-button" data-tab="settings">⚙️ Settings</button>
+                </div>
+
+                <!-- Profile Tab -->
+                <div class="tab-content active" id="profile-tab">
+                    <div class="profile-section">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <div class="avatar-circle">
+                                    <span class="avatar-initial">J</span>
+                                </div>
+                                <button class="avatar-edit-btn">📷</button>
+                            </div>
+                            <div class="profile-info">
+                                <h2>Jyotsana</h2>
+                                <p class="profile-role">Student</p>
+                                <div class="profile-stats">
+                                    <span class="stat-item">📚 Grade 10</span>
+                                    <span class="stat-item">🎯 Level 15</span>
+                                    <span class="stat-item">⭐ 1,250 Points</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-details">
+                            <div class="dashboard-grid">
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>📋 Personal Information</h3>
+                                        <button class="edit-btn">✏️ Edit</button>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="info-grid">
+                                            <div class="info-item">
+                                                <span class="info-label">Full Name:</span>
+                                                <span class="info-value">Jyotsana Sharma</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">Email:</span>
+                                                <span class="info-value">jyotsana.sharma@email.com</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">Grade:</span>
+                                                <span class="info-value">10th Grade</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">School:</span>
+                                                <span class="info-value">Delhi Public School</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">Joined:</span>
+                                                <span class="info-value">September 2024</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">Location:</span>
+                                                <span class="info-value">New Delhi, India</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>🎯 Learning Preferences</h3>
+                                        <button class="edit-btn">✏️ Edit</button>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="preferences-list">
+                                            <div class="preference-item">
+                                                <span class="preference-label">Favorite Subjects:</span>
+                                                <div class="preference-tags">
+                                                    <span class="tag mathematics">Mathematics</span>
+                                                    <span class="tag science">Science</span>
+                                                    <span class="tag english">English</span>
+                                                </div>
+                                            </div>
+                                            <div class="preference-item">
+                                                <span class="preference-label">Learning Style:</span>
+                                                <span class="preference-value">Visual & Interactive</span>
+                                            </div>
+                                            <div class="preference-item">
+                                                <span class="preference-label">Difficulty Level:</span>
+                                                <span class="preference-value">Intermediate</span>
+                                            </div>
+                                            <div class="preference-item">
+                                                <span class="preference-label">Goals:</span>
+                                                <span class="preference-value">Improve in Physics & Chemistry</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>🏆 Achievements</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="achievements-grid">
+                                            <div class="achievement-item earned">
+                                                <div class="achievement-icon">🥇</div>
+                                                <div class="achievement-info">
+                                                    <h4>Math Master</h4>
+                                                    <p>Solved 100 math problems</p>
+                                                </div>
+                                            </div>
+                                            <div class="achievement-item earned">
+                                                <div class="achievement-icon">📚</div>
+                                                <div class="achievement-info">
+                                                    <h4>Knowledge Seeker</h4>
+                                                    <p>Asked 50 questions</p>
+                                                </div>
+                                            </div>
+                                            <div class="achievement-item">
+                                                <div class="achievement-icon">🔬</div>
+                                                <div class="achievement-info">
+                                                    <h4>Science Explorer</h4>
+                                                    <p>Complete 25 science quizzes</p>
+                                                </div>
+                                            </div>
+                                            <div class="achievement-item">
+                                                <div class="achievement-icon">⭐</div>
+                                                <div class="achievement-info">
+                                                    <h4>Perfect Score</h4>
+                                                    <p>Get 100% on any quiz</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Tab -->
+                <div class="tab-content" id="history-tab">
+                    <div class="history-section">
+                        <div class="history-filters">
+                            <select class="filter-select">
+                                <option value="">All Activities</option>
+                                <option value="queries">Queries</option>
+                                <option value="assignments">Assignments</option>
+                                <option value="quizzes">Quizzes</option>
+                                <option value="stories">Stories</option>
+                            </select>
+                            <select class="filter-select">
+                                <option value="">All Time</option>
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                            </select>
+                            <input type="text" class="search-history" placeholder="Search history...">
+                        </div>
+
+                        <div class="history-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon query">❓</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Text Query - Photosynthesis</h4>
+                                        <span class="timeline-time">2 hours ago</span>
+                                    </div>
+                                    <p class="timeline-description">Asked about the process of photosynthesis and got detailed explanation</p>
+                                    <div class="timeline-actions">
+                                        <button class="btn-small">View Response</button>
+                                        <button class="btn-small btn-secondary">Ask Follow-up</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-icon quiz">🧠</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Mathematics Quiz - Algebra</h4>
+                                        <span class="timeline-time">5 hours ago</span>
+                                    </div>
+                                    <p class="timeline-description">Completed 10-question algebra quiz with 85% score</p>
+                                    <div class="timeline-meta">
+                                        <span class="meta-tag">Score: 85%</span>
+                                        <span class="meta-tag">Time: 12:45</span>
+                                    </div>
+                                    <div class="timeline-actions">
+                                        <button class="btn-small">View Details</button>
+                                        <button class="btn-small btn-secondary">Retake Quiz</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-icon assignment">📝</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Assignment Generated - Quadratic Equations</h4>
+                                        <span class="timeline-time">1 day ago</span>
+                                    </div>
+                                    <p class="timeline-description">Generated 10 intermediate-level questions on quadratic equations</p>
+                                    <div class="timeline-actions">
+                                        <button class="btn-small">View Assignment</button>
+                                        <button class="btn-small btn-secondary">Download PDF</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-icon story">📚</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Story Mode - The Photosynthesis Factory</h4>
+                                        <span class="timeline-time">2 days ago</span>
+                                    </div>
+                                    <p class="timeline-description">Completed Chapter 3 of 5 in the photosynthesis learning story</p>
+                                    <div class="timeline-meta">
+                                        <span class="meta-tag">Progress: 60%</span>
+                                        <span class="meta-tag">Subject: Biology</span>
+                                    </div>
+                                    <div class="timeline-actions">
+                                        <button class="btn-small">Continue Story</button>
+                                        <button class="btn-small btn-secondary">Start Over</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-icon homework">🎓</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4>Homework Help - Physics Problem</h4>
+                                        <span class="timeline-time">3 days ago</span>
+                                    </div>
+                                    <p class="timeline-description">Got step-by-step solution for calculating force and acceleration</p>
+                                    <div class="timeline-actions">
+                                        <button class="btn-small">View Solution</button>
+                                        <button class="btn-small btn-secondary">Similar Problems</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="load-more-history">
+                            <button class="btn">📄 Load More History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Tab -->
+                <div class="tab-content" id="progress-tab">
+                    <div class="progress-section">
+                        <div class="progress-overview">
+                            <div class="dashboard-grid">
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>📊 Overall Statistics</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="stats-grid">
+                                            <div class="stat-box">
+                                                <div class="stat-number">156</div>
+                                                <div class="stat-label">Total Queries</div>
+                                            </div>
+                                            <div class="stat-box">
+                                                <div class="stat-number">23</div>
+                                                <div class="stat-label">Quizzes Taken</div>
+                                            </div>
+                                            <div class="stat-box">
+                                                <div class="stat-number">12</div>
+                                                <div class="stat-label">Assignments Generated</div>
+                                            </div>
+                                            <div class="stat-box">
+                                                <div class="stat-number">87%</div>
+                                                <div class="stat-label">Average Score</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>📈 Subject Performance</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="performance-chart">
+                                            <div class="chart-bar">
+                                                <span class="subject">Mathematics</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 92%"></div>
+                                                    <span class="percentage">92%</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-bar">
+                                                <span class="subject">Science</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 85%"></div>
+                                                    <span class="percentage">85%</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-bar">
+                                                <span class="subject">English</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 78%"></div>
+                                                    <span class="percentage">78%</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-bar">
+                                                <span class="subject">History</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 83%"></div>
+                                                    <span class="percentage">83%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>📅 Weekly Activity</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="activity-chart">
+                                            <div class="activity-day">
+                                                <div class="day-label">Mon</div>
+                                                <div class="activity-bar" style="height: 60%"></div>
+                                                <div class="day-count">12</div>
+                                            </div>
+                                            <div class="activity-day">
+                                                <div class="day-label">Tue</div>
+                                                <div class="activity-bar" style="height: 80%"></div>
+                                                <div class="day-count">16</div>
+                                            </div>
+                                            <div class="activity-day">
+                                                <div class="day-label">Wed</div>
+                                                <div class="activity-bar" style="height: 45%"></div>
+                                                <div class="day-count">9</div>
+                                            </div>
+                                            <div class="activity-day">
+                                                <div class="day-label">Thu</div>
+                                                <div class="activity-bar" style="height: 90%"></div>
+                                                <div class="day-count">18</div>
+                                            </div>
+                                            <div class="activity-day">
+                                                <div class="day-label">Fri</div>
+                                                <div class="activity-bar" style="height: 75%"></div>
+                                                <div class="day-count">15</div>
+                                            </div>
+                                            <div class="activity-day">
+                                                <div class="day-label">Sat</div>
+                                                <div class="activity-bar" style="height: 30%"></div>
+                                                <div class="day-count">6</div>
+                                            </div>
+                                            <div class="activity-day">
+                                                <div class="day-label">Sun</div>
+                                                <div class="activity-bar" style="height: 20%"></div>
+                                                <div class="day-count">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-content" id="settings-tab">
+                    <div class="settings-section">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🔒 Account Settings</h3>
+                                </div>
+                                <div class="card-content">
+                                    <form class="settings-form">
+                                        <div class="form-group">
+                                            <label class="form-label">Change Password</label>
+                                            <input type="password" class="form-input" placeholder="Current password">
+                                            <input type="password" class="form-input" placeholder="New password">
+                                            <input type="password" class="form-input" placeholder="Confirm new password">
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary">Update Password</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🔔 Notifications</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="notification-settings">
+                                        <div class="setting-item">
+                                            <span class="setting-label">Email Notifications</span>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-item">
+                                            <span class="setting-label">Quiz Reminders</span>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-item">
+                                            <span class="setting-label">Assignment Notifications</span>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-item">
+                                            <span class="setting-label">Progress Updates</span>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" checked>
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🎨 Appearance</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="appearance-settings">
+                                        <div class="setting-item">
+                                            <span class="setting-label">Theme</span>
+                                            <select class="form-select">
+                                                <option value="dark" selected>Dark Mode</option>
+                                                <option value="light">Light Mode</option>
+                                                <option value="auto">Auto</option>
+                                            </select>
+                                        </div>
+                                        <div class="setting-item">
+                                            <span class="setting-label">Font Size</span>
+                                            <select class="form-select">
+                                                <option value="small">Small</option>
+                                                <option value="medium" selected>Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>💾 Data & Privacy</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="data-settings">
+                                        <button class="btn btn-secondary full-width">📥 Export My Data</button>
+                                        <button class="btn btn-secondary full-width">🗑️ Clear History</button>
+                                        <button class="btn full-width" style="background-color: var(--error-color);">❌ Delete Account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .dashboard-tabs {
+            margin-bottom: 2rem;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-avatar {
+            position: relative;
+        }
+
+        .avatar-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-accent), var(--success-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .avatar-edit-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: var(--primary-accent);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .profile-info h2 {
+            color: var(--accent-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-role {
+            color: var(--secondary-text);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            background-color: var(--accent-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
+
+        .edit-btn {
+            background: none;
+            border: none;
+            color: var(--primary-accent);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--accent-bg);
+            border-radius: 5px;
+        }
+
+        .info-label {
+            color: var(--secondary-text);
+            font-weight: 500;
+        }
+
+        .info-value {
+            color: var(--primary-text);
+        }
+
+        .preferences-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .preference-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .preference-label {
+            color: var(--secondary-text);
+            font-weight: 500;
+        }
+
+        .preference-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .preference-value {
+            color: var(--primary-text);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .achievement-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--accent-bg);
+            border-radius: 8px;
+            opacity: 0.6;
+        }
+
+        .achievement-item.earned {
+            opacity: 1;
+            border: 2px solid var(--success-color);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+        }
+
+        .achievement-info h4 {
+            color: var(--accent-text);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .achievement-info p {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .history-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .search-history {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .history-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: -2.5rem;
+            top: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .timeline-icon.query {
+            background-color: var(--primary-accent);
+        }
+
+        .timeline-icon.quiz {
+            background-color: var(--success-color);
+        }
+
+        .timeline-icon.assignment {
+            background-color: var(--warning-color);
+        }
+
+        .timeline-icon.story {
+            background-color: #9b59b6;
+        }
+
+        .timeline-icon.homework {
+            background-color: #e74c3c;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-header h4 {
+            color: var(--accent-text);
+            margin: 0;
+        }
+
+        .timeline-time {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .timeline-description {
+            color: var(--secondary-text);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta-tag {
+            background-color: var(--accent-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--secondary-text);
+        }
+
+        .timeline-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .load-more-history {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--accent-bg);
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .activity-chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            height: 150px;
+            padding: 1rem;
+        }
+
+        .activity-day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+        }
+
+        .day-label {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .activity-bar {
+            width: 20px;
+            background-color: var(--primary-accent);
+            border-radius: 3px;
+            min-height: 10px;
+        }
+
+        .day-count {
+            color: var(--primary-text);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .settings-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .notification-settings,
+        .appearance-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--accent-bg);
+            border-radius: 5px;
+        }
+
+        .setting-label {
+            color: var(--primary-text);
+            font-weight: 500;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--secondary-bg);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--primary-accent);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .data-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .profile-stats {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .history-filters {
+                flex-direction: column;
+            }
+            
+            .timeline-header {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+            
+            .timeline-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .activity-chart {
+                height: 120px;
+            }
+        }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        // Fetch user info
+        try {
+            const res = await fetch('/dashboard');
+            const data = await res.json();
+            if (!res.ok) {
+                window.location.href = 'login.html';
+                return;
+            }
+            // Update profile info
+            document.querySelector('.profile-info h2').textContent = data.name || data.username;
+            document.querySelector('.avatar-initial').textContent = (data.name || data.username)[0].toUpperCase();
+            document.querySelector('.profile-role').textContent = 'User';
+            document.querySelector('.profile-stats').innerHTML = '';
+            document.querySelector('.dashboard-grid').innerHTML = `<div class='dashboard-card'><div class='card-header'><h3>Account Info</h3></div><div class='card-content'><div class='info-grid'><div class='info-item'><span class='info-label'>Full Name:</span><span class='info-value'>${data.name || ''}</span></div><div class='info-item'><span class='info-label'>Username (Email):</span><span class='info-value'>${data.username}</span></div></div></div></div>`;
+        } catch (err) {
+            window.location.href = 'login.html';
+        }
+        // Logout logic
+        const logoutBtn = document.createElement('button');
+        logoutBtn.textContent = 'Logout';
+        logoutBtn.className = 'btn btn-secondary';
+        logoutBtn.style.marginLeft = '1rem';
+        document.querySelector('.nav-container').appendChild(logoutBtn);
+        logoutBtn.addEventListener('click', async function() {
+            await fetch('/logout', { method: 'POST' });
+            window.location.href = 'login.html';
+        });
+    });
+    </script>
+</body>
+</html>
