@@ -1,0 +1,4 @@
+GROQ_API_KEY=""
+GROQ_MODEL=""
+
+Create Groq api and choose the model , update the details here and rename this file with .env

@@ -27,6 +27,7 @@
                     <a href="#" class="nav-link active">Ask Query ▼</a>
                     <div class="dropdown-content">
                         <a href="ask-query.html?type=text">Text Query</a>
+                        <a href="ask-query.html?type=image">Math Image Query</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -465,6 +466,19 @@
 <script>
 // --- Chatbot Text Query Integration ---
 document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching logic
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            tabButtons.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(tc => tc.classList.remove('active'));
+            btn.classList.add('active');
+            const tab = btn.getAttribute('data-tab');
+            document.getElementById(tab + '-tab').classList.add('active');
+        });
+    });
+
     // Text Query
     const askBtn = document.querySelector('#text-tab .btn');
     const textArea = document.getElementById('text-query');

@@ -590,6 +590,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const quizTopic = document.getElementById('quiz-topic');
     const questionCount = document.getElementById('question-count');
     const quizContainer = document.querySelector('.active-quiz-section .quiz-container');
+    let lastQuiz = null;
     if (quizForm) {
         quizForm.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -605,6 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 const data = await res.json();
                 if (data.quiz && Array.isArray(data.quiz)) {
+                    lastQuiz = data.quiz;
                     let html = '<form class="generated-quiz-form">';
                     data.quiz.forEach((q, i) => {
                         html += `<div class='question-card'><div class='question-header'><h4 class='question-title'>Q${i+1}: ${q.question}</h4></div><div class='question-content'>`;
@@ -621,6 +623,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     html += '<button type="submit" class="btn">Submit Quiz</button></form>';
                     quizContainer.innerHTML = html;
+
+                    // Add submit handler for generated quiz form
+                    const generatedQuizForm = document.querySelector('.generated-quiz-form');
+                    generatedQuizForm.addEventListener('submit', async function(ev) {
+                        ev.preventDefault();
+                        const answers = [];
+                        lastQuiz.forEach((q, i) => {
+                            const selected = generatedQuizForm.querySelector(`input[name='q${i}']:checked`);
+                            answers.push(selected ? selected.value : '');
+                        });
+                        quizContainer.innerHTML = '<div style="text-align:center;padding:2rem"><em>Checking answers...</em></div>';
+                        try {
+                            const res = await fetch('/check-quiz-answers', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ quiz: lastQuiz, answers })
+                            });
+                            const result = await res.json();
+                            let html = `<div class='quiz-results'><h3 style='color:var(--primary-accent);text-align:center;'>Your Score: ${result.score}% (${result.correct}/${result.total} correct)</h3><div class='detailed-results'>`;
+                            result.results.forEach((r, i) => {
+                                html += `<div class='result-item ${r.is_correct ? 'correct' : 'incorrect'}'><div class='result-header'><span class='question-num'>Q${i+1}.</span><span class='result-status'>${r.is_correct ? '✅ Correct' : '❌ Incorrect'}</span></div><div class='result-question'>${r.question}</div><div class='result-answer'><span class='your-answer'>Your answer: ${r.your_answer || '<em>None</em>'}</span><span class='correct-answer'>Correct answer: ${r.correct_answer}</span></div></div>`;
+                            });
+                            html += '</div></div>';
+                            quizContainer.innerHTML = html;
+                        } catch (err) {
+                            quizContainer.innerHTML = `<div style='color:red;text-align:center;padding:2rem'>Error: ${err.message}</div>`;
+                        }
+                    });
                 } else {
                     quizContainer.innerHTML = `<div style='color:red;text-align:center;padding:2rem'>${data.error || 'Failed to generate quiz.'}</div>`;
                 }

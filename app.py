@@ -129,6 +129,26 @@ def generate_assignment():
         'questions': questions
     })
 
+@app.route('/check-quiz-answers', methods=['POST'])
+def check_quiz_answers():
+    data = request.get_json()
+    quiz = data.get('quiz', [])
+    user_answers = data.get('answers', [])
+    results = []
+    correct_count = 0
+    for i, q in enumerate(quiz):
+        correct = (user_answers[i] == q.get('answer'))
+        results.append({
+            'question': q.get('question'),
+            'your_answer': user_answers[i],
+            'correct_answer': q.get('answer'),
+            'is_correct': correct
+        })
+        if correct:
+            correct_count += 1
+    score = int((correct_count / len(quiz)) * 100) if quiz else 0
+    return jsonify({'score': score, 'results': results, 'total': len(quiz), 'correct': correct_count})
+
 # Serve static files (frontend)
 @app.route('/')
 def serve_index():
